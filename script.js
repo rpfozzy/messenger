@@ -1,7 +1,10 @@
-// Конфигурация GitHub API
-const API_KEY = process.env.API_KEY; // Изменено
+require('dotenv').config();
+
+const API_KEY = process.env.GITHUB_API_KEY;
 const REPO_OWNER = 'rpfozzy';
 const REPO_NAME = 'data3';
+
+// Дальше ваш код, где используется API_KEY
 
 // Функция для создания или обновления файла на GitHub
 async function createFileOnGitHub(filename, content) {
@@ -438,4 +441,4 @@ window.addEventListener('load', function() {
         showMainMenu();
         setInterval(checkForNewMessages, 100);
     }
-});  
+}); 
