@@ -1,5 +1,5 @@
 // Конфигурация GitHub API
-const API_KEY = process.env.GIT_API_KEY; // Изменено
+const API_KEY = process.env.API_KEY; // Изменено
 const REPO_OWNER = 'rpfozzy';
 const REPO_NAME = 'data3';
 
