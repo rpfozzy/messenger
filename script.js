@@ -1,5 +1,5 @@
 // Конфигурация GitHub API
-const GITHUB_TOKEN = 'GITHUB_TOKEN';
+const GITHUB_TOKEN = 'GH_TOKEN';
 const REPO_OWNER = 'rpfozzy';
 const REPO_NAME = 'data3';
 
