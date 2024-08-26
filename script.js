@@ -1,5 +1,5 @@
 // Конфигурация GitHub API
-const GITHUB_TOKEN = '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';
+const API_KEY = 'API_KEY';
 const REPO_OWNER = 'rpfozzy';
 const REPO_NAME = 'data3';
 
@@ -11,7 +11,7 @@ async function createFileOnGitHub(filename, content) {
         // Проверяем, существует ли файл
         const existingFile = await fetch(url, {
             headers: {
-                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Authorization': `token ${API_KEY}`,
             },
         });
         
@@ -20,7 +20,7 @@ async function createFileOnGitHub(filename, content) {
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
-                    'Authorization': `token ${GITHUB_TOKEN}`,
+                    'Authorization': `token ${API_KEY}`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
@@ -40,7 +40,7 @@ async function createFileOnGitHub(filename, content) {
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
-                    'Authorization': `token ${GITHUB_TOKEN}`,
+                    'Authorization': `token ${API_KEY}`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
@@ -68,7 +68,7 @@ async function getFileFromGitHub(filename) {
     try {
         const response = await fetch(url, {
             headers: {
-                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Authorization': `token ${API_KEY}`,
             },
         });
         
@@ -88,7 +88,7 @@ async function getFileFromGitHub(filename) {
 async function searchUser(query) {
     try {
         const files = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/`, {
-            headers: {'Authorization': `token ${GITHUB_TOKEN}`},
+            headers: {'Authorization': `token ${API_KEY}`},
         }).then(res => res.json());
 
         for (const file of files) {
