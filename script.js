@@ -1,5 +1,5 @@
 // Конфигурация GitHub API
-const API_KEY = 'ghp_Lgu2uY6GjDp77MaWKx1xFHx4Rhn9g2X2b1x';
+const API_KEY = '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';
 const REPO_OWNER = 'rpfozzy';
 const REPO_NAME = 'data3';
 
