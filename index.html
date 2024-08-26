@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS-Style Регистрация и Авторизация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <div id="mainContent">
+            <h1>Добро пожаловать</h1>
+            <div class="button-group">
+                <button onclick="showForm('register')">Регистрация</button>
+                <button onclick="showForm('login')">Авторизация</button>
+            </div>
+        </div>
+
+        <form id="registerForm" class="form">
+            <h2>Регистрация</h2>
+            <div class="form-group">
+                <label for="nickname">Ник аккаунта</label>
+                <input type="text" id="nickname" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" placeholder="@user" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефона</label>
+                <div class="phone-input">
+                    <input type="tel" id="phone" placeholder="+68 000" pattern="\+68\d{3}" required>
+                    <button type="button" class="generate-btn" onclick="generateRandomNumbers()">🎲</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+            <button type="button" class="back-btn" onclick="showButtons()">Назад</button>
+        </form>
+
+        <form id="loginForm" class="form">
+            <h2>Авторизация</h2>
+            <div class="form-group">
+                <label for="loginPhone">Номер телефона</label>
+                <input type="tel" id="loginPhone" placeholder="+68 000" pattern="\+68\d{3}" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Пароль</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit">Войти</button>
+            <button type="button" class="back-btn" onclick="showButtons()">Назад</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
